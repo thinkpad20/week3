@@ -1,0 +1,26 @@
+<h1>Movies</h1>
+
+<p><a href="/movies/new">Add a New Movie</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID Number</th>
+      <th>Title</th>
+      <th>Director</th>
+      <th>Year</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @movies.each do |movie| %>
+      <tr>
+        <td><a href='#'>ID</a></td>
+        <td>Title</td>
+        <td>Director</td>
+        <td>Year</td>
+        <td><a href="#">Delete</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
