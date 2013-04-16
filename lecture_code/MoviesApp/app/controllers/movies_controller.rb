@@ -1,7 +1,19 @@
 class MoviesController < ApplicationController
 
+  def destroy
+    # ...
+  end
   def create
-    #....
+    @movies = [ { id: 1, title: 'Apollo 13', director: 'Ron Howard', year: 2005 },
+                { id: 2, title: 'Star Wars', director: 'George Lucas', year: 1977 } ]
+
+
+    @movies.push({ :id => (@movies.size + 1),
+                         :title => params[:title],
+                         :director => params[:director],
+                         :year => params[:year]
+                       })
+    render 'index'
   end
   def new
 

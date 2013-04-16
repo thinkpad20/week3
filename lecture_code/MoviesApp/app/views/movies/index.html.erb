@@ -1,6 +1,8 @@
 <h1><%= @title %></h1>
 
-<p><a href="/movies/new">Add a New Movie</a></p>
+<%= image_tag 'rails.png' %>
+<p><%= link_to "Add a New Movie", new_movie_path %></p>
+<!-- <p><a href="/movies/new">Add a New Movie</a></p> -->
 
 <table>
   <thead>
@@ -19,7 +21,7 @@
         <td><%= movie[:title] %></td>
         <td><%= movie[:director] %></td>
         <td><%= movie[:year] %></td>
-        <td><a href="#">Delete</td>
+        <td><%= link_to "Delete", movie_url(movie[:id]), :method => :delete %>
       </tr>
     <% end %>
   </tbody>

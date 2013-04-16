@@ -1,8 +1,22 @@
 <h1>New Movie</h1>
 
-<form action="/movies/create" method="post">
-  <p><label>Title:</label>
-    <input type="text" name="title"></input></p>
+<%= form_tag(movies_url) do %>
+  <p><%= label_tag :title %>
+    <%= text_field_tag :title %></p>
+
+
+  <p><%= label_tag :director %>
+    <%= text_field_tag :director %></p>
+
+  <p><%= label_tag :year %>
+    <%= text_field_tag :year %></p>
+
+  <p><%= submit_tag %></p>
+<% end %>
+
+<!-- <form action="/movies/create" method="post">
+  <p><label for="title">Title:</label>
+    <input type="text" id="title" name="title"></input></p>
 
   <p><label>Director:</label>
     <input type="text" name="director"></input></p>
@@ -13,3 +27,4 @@
 
   <input type="submit"></input>
 </form>
+ -->
