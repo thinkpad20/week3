@@ -1,4 +1,4 @@
-<h1>Movies</h1>
+<h1><%= @title %></h1>
 
 <p><a href="/movies/new">Add a New Movie</a></p>
 
@@ -15,10 +15,10 @@
   <tbody>
     <% @movies.each do |movie| %>
       <tr>
-        <td><a href='#'>ID</a></td>
-        <td>Title</td>
-        <td>Director</td>
-        <td>Year</td>
+        <td><a href='#'><%= movie[:id] %></a></td>
+        <td><%= movie[:title] %></td>
+        <td><%= movie[:director] %></td>
+        <td><%= movie[:year] %></td>
         <td><a href="#">Delete</td>
       </tr>
     <% end %>
