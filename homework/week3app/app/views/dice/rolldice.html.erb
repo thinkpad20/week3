@@ -1,0 +1,7 @@
+You rolled:
+
+<%= @pointText %><br>
+<%= image_tag((asset_path @leftDie), size:"150x150") %>
+<%= image_tag((asset_path @rightDie), size:"150x150") %><br>
+<%= image_tag((asset_path @rImage), size:"300x150") %> <br>
+<h2><form action="<%= @nextStepURL %>" class="button_to" method="<%= @nextStepMethod %>"><div><input class="btn btn-success btn-large" type="submit" value="<%= @nextStepText %>" /><input name="authenticity_token" type="hidden" value="3HcFL3V5Nsg6/GwTHRWYxuBztESkDrNUyP6jn90C8e0=" /></div></form></h2>

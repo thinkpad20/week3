@@ -1,0 +1,19 @@
+<html>
+<body>
+<table>
+	<tr>
+		<td><big>You chose:</big></td>
+		<td><big>The computer chose:</big></td>
+	</tr>
+	<tr>
+		<td><%= image_tag((asset_path @image), size:"100x100") %></td>
+		<td><%= image_tag((asset_path @cImage), size:"100x100") %> </td>
+	</tr>
+	<tr>
+		<td colspan="2"> <%= image_tag((asset_path @rImage), size:"300x200") %> </td>
+	</tr>
+</table>
+
+<div><%= link_to("Play again", "/rps")%> </div>
+</body>
+</html>
